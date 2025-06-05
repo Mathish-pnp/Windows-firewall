@@ -14,5 +14,43 @@ Configure and test basic firewall rules to allow or block network traffic using 
 
 ---
 
-## 📂 Folder Structure
+
+---
+
+
+### 1. Open Firewall Settings
+
+- Opened **Windows Defender Firewall**.
+- Navigated to **Advanced Settings** to manage rules.
+
+📷 `screenshots/01-firewall-main-screen.png`
+
+---
+
+### 2. View Current Inbound Rules
+
+- Listed active inbound rules from Advanced Security console.
+
+📷 `screenshots/02-inbound-rules.png`
+
+---
+
+### 3. Block Inbound Traffic on Port 23 (Telnet)
+
+- Created a new inbound rule:
+  - Type: Port
+  - Protocol: TCP
+  - Port: 23
+  - Action: Block the connection
+  - Profile: Domain, Private, Public
+
+📷 `screenshots/03-block-port-23-rule.png`
+
+---
+
+### 4. Test Blocked Port with PowerShell
+
+```powershell
+Test-NetConnection -ComputerName localhost -Port 23
+
 
