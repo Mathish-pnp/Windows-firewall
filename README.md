@@ -53,4 +53,8 @@ Configure and test basic firewall rules to allow or block network traffic using 
 ```powershell
 Test-NetConnection -ComputerName localhost -Port 23
 
+# PowerShell script to test connection to port 23
+Test-NetConnection -ComputerName localhost -Port 23
+
+
 
